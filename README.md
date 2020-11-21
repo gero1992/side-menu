@@ -97,7 +97,7 @@ customElements.define('example-element', ExampleElement);
 ```
 
 #### Set item selected:
-You can set an item to be selected by adding a 'selected' attribute to it
+You can set an item to be selected by adding a **`selected`** attribute to it
 ```html
 <side-menu>
     <side-menu-item label="Home" selected></side-menu-item>
@@ -105,7 +105,7 @@ You can set an item to be selected by adding a 'selected' attribute to it
 ```
 
 #### Expand nested items:
-When you have a multi level menu, you can expand the child items by adding 'expanded' to the parent:
+When you have a multi level menu, you can expand the child items by adding **`expanded`** attribute to the parent:
 ```html
 <side-menu>
    <side-menu-item label="Parent" expanded>

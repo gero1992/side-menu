@@ -1,5 +1,5 @@
 {
-  "name": "side-menu",
+  "name": "@maksu/side-menu",
   "version": "1.0.0",
   "description": "Side menu for navigation in web applications",
   "author": "Gero Vachkov <gerovachkov@gmail.com>",
@@ -12,9 +12,14 @@
     "navigation",
     "menu"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/gero.1992/side-menu"
+  },
   "scripts": {
     "start": "polyserve --npm --port 3000 --open"
   },
+  "main": "src/side-menu.js",
   "dependencies": {
     "polyserve": "^0.27.15",
     "@polymer/iron-icon": "3.0.1",
