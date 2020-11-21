@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <script type="module">
+        import "./src/side-menu.js"
+        import "./src/side-menu-item.js"
+        import "@polymer/iron-icon/iron-icon.js";
+        import "@polymer/iron-icons/iron-icons.js";
+    </script>
+    <style type="text/css">
+        #drawer {
+            min-width: 15rem;
+            height: 100%;
+            box-shadow: 0 2px 4px -1px hsla(214, 53%, 23%, 0.16), 0 3px 12px -1px hsla(214, 50%, 22%, 0.26);
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position:fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #drawer.collapsed {
+            min-width: 0;
+        }
+
+        #toggleIcon{
+            margin-bottom: 10px;
+            cursor: pointer;
+            align-self: center;
+            color: rgb(235, 89, 5);
+        }
+    </style>
+</head>
+<body>
+
+<div id="drawer">
+    <side-menu id="menu">
+        <side-menu-item label="Home">
+            <iron-icon icon="home" slot="icon"></iron-icon>
+        </side-menu-item>
+        <side-menu-item label="Accounts">
+            <iron-icon icon="account-circle" slot="icon"></iron-icon>
+        </side-menu-item>
+        <side-menu-item label="Assignments">
+            <iron-icon icon="assignment-turned-in" slot="icon"></iron-icon>
+        </side-menu-item>
+        <side-menu-item label="Timeline">
+            <iron-icon icon="timeline" slot="icon"></iron-icon>
+        </side-menu-item>
+        <side-menu-item label="Favorites">
+            <iron-icon icon="favorite" slot="icon"></iron-icon>
+            <side-menu-item label="Learn">
+                <side-menu-item
+                        label="How to"
+                        href="https://www.w3schools.com/howto/"
+                        target="_blank"
+                ></side-menu-item>
+            </side-menu-item>
+            <side-menu-item
+                    label="Web Components"
+                    href="https://www.webcomponents.org/"
+                    target="_blank"
+            ></side-menu-item>
+            <side-menu-item label="Guides" href="guides"></side-menu-item>
+            <side-menu-item label="Colors" href="colors"></side-menu-item>
+        </side-menu-item>
+    </side-menu>
+
+    <iron-icon id="toggleIcon" icon="chevron-left"></iron-icon>
+</div>
+
+<script>
+    const toggleIcon = document.getElementById("toggleIcon");
+    const menu = document.getElementById("menu");
+    const drawer = document.getElementById("drawer");
+
+    toggleIcon.addEventListener("click", () => {
+        menu.compact = !menu.compact;
+        if (menu.compact) {
+            drawer.classList.add("collapsed");
+            toggleIcon['icon']='chevron-right';
+
+        } else {
+            drawer.classList.remove("collapsed");
+            toggleIcon['icon']='chevron-left';
+        }
+
+    });
+</script>
+</body>

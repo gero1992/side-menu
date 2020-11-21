@@ -1,0 +1,26 @@
+{
+  "name": "side-menu",
+  "version": "1.0.0",
+  "description": "Side menu for navigation in web applications",
+  "author": "Gero Vachkov <gerovachkov@gmail.com>",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "lit",
+    "litelement",
+    "side",
+    "navigation",
+    "menu"
+  ],
+  "scripts": {
+    "start": "polyserve --npm --port 3000 --open"
+  },
+  "dependencies": {
+    "polyserve": "^0.27.15",
+    "@polymer/iron-icon": "3.0.1",
+    "@polymer/iron-icons": "3.0.1",
+    "@webcomponents/webcomponentsjs": "2.4.4",
+    "lit-element": "2.4.0",
+    "@polymer/paper-tooltip": "^3.0.1"
+  }
+}
