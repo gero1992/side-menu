@@ -82,13 +82,13 @@ customElements.define('example-element', ExampleElement);
       <side-menu-item label="Learn">
          <side-menu-item
             label="How to"
-            href="https://www.w3schools.com/howto/"
+            href="/howto"
             target="_blank">        
          </side-menu-item>
       </side-menu-item>
       <side-menu-item
          label="Web Components"
-         href="https://www.webcomponents.org/"
+         href="/webcomponents"
          target="_blank">
       </side-menu-item>
       <side-menu-item label="Guides" href="guides"></side-menu-item>
