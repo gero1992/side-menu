@@ -1,3 +1,4 @@
+[![npm version](https://badgen.net/npm/v/@maksu/side-menu)](https://www.npmjs.com/package/@maksu/side-menu)
 # side-menu
 
 Side-menu is a LitElement Web Component providing application navigation functionality withing the UI. 
