@@ -1,6 +1,6 @@
 {
   "name": "@maksu/side-menu",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Side menu for navigating in web applications",
   "author": "Gero Vachkov <gerovachkov@gmail.com>",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/gero.1992/side-menu.git"
+    "url": "git+https://github.com/gero1992/side-menu.git"
   },
   "scripts": {
     "start": "polyserve --npm --port 3000 --open"
@@ -29,9 +29,9 @@
     "@polymer/paper-tooltip": "^3.0.1"
   },
   "bugs": {
-    "url": "https://gitlab.com/gero.1992/side-menu/issues"
+    "url": "https://github.com/gero1992/side-menu/issues"
   },
-  "homepage": "https://gitlab.com/gero.1992/side-menu#readme",
+  "homepage": "https://github.com/gero1992/side-menu#readme",
   "devDependencies": {},
   "license": "MIT"
 }
