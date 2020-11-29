@@ -9,7 +9,7 @@ It can be used for hierarchical or flat navigation.
 1. Adding icons to the elements
 1. Multi level navigation
 
-![Example of side-menu](https://gitlab.com/gero.1992/side-menu/-/raw/master/example.png)
+![Example of side-menu](https://github.com/gero1992/side-menu/blob/master/example.png)
 
 ## Installation
 Install 'side-menu' web component:
