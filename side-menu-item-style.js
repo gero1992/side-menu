@@ -1,6 +1,6 @@
-import { css } from "lit-element";
+import { c as css } from './lit-element-92bc5b67.js';
 
-export const sideMenuItemStyle = css`
+const sideMenuItemStyle = css`
   :host {
     --item-padding: 1rem;
     --item-content-padding: 1rem;
@@ -144,3 +144,5 @@ export const sideMenuItemStyle = css`
       }
   }
 `;
+
+export { sideMenuItemStyle };
