@@ -24,10 +24,12 @@
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-icons": "3.0.1",
     "@polymer/paper-tooltip": "^3.0.1",
-    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-commonjs": "^17.0.0",
     "@webcomponents/webcomponentsjs": "2.4.4",
+    "gh-pages": "^3.1.0",
     "lit-element": "2.4.0",
     "polyserve": "^0.27.15",
+    "rollup": "^2.30.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-filesize": "^9.0.2",
@@ -38,5 +40,9 @@
     "url": "https://github.com/gero1992/side-menu/issues"
   },
   "homepage": "https://github.com/gero1992/side-menu#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
 }
