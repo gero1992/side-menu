@@ -27,7 +27,7 @@
     "lit-element": "2.4.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.0.0"
+    "@rollup/plugin-node-resolve": "^11.0.0",
     "polyserve": "^0.27.15",
     "@rollup/plugin-commonjs": "^17.0.0",
     "rollup-plugin-copy": "^3.3.0"
