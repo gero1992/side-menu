@@ -5,7 +5,7 @@
 Side-menu is a LitElement Web Component providing application navigation functionality withing the UI. 
 It can be used for hierarchical or flat navigation.
 
-[See live demo](https://gero1992.github.io/side-menu/)
+[Live demo](https://gero1992.github.io/side-menu/)
 
 ##### Supported features:
 1. Compact and normal modes
