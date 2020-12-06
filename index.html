@@ -6,8 +6,10 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2.0.0/webcomponents-loader.js"></script>
 
-    <script type="module" import src="./side-menu.js"></script>
-        <script type="module" import src="./side-menu-item.js"></script>
+    <script type="module">
+        import "./side-menu.js"
+        import "./side-menu-item.js"
+    </script>
     <style type="text/css">
         #drawer {
             min-width: 15rem;
