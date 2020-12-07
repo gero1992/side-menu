@@ -16,10 +16,12 @@ jobs:
           node-version: 12
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set default credentials
+        run: |
+          git config user.name $GITHUB_ACTOR
+          git config user.email gh-actions-${GITHUB_ACTOR}@github.com
       - name: Set package version
         run: npm version $RELEASE_VERSION
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
   build:
     needs: set-version
