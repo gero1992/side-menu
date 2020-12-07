@@ -22,6 +22,10 @@ jobs:
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
       - name: Set package version
         run: npm version $RELEASE_VERSION
+      - name: Push new version
+        run: |
+          git remote add gh-origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git push gh-origin HEAD:master
           
   build:
     needs: set-version
