@@ -1,0 +1,39 @@
+name: Publish version to NPM and demo to GH-Pages
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  set-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm version ${{ steps.branch_name.outputs.SOURCE_TAG }}
+
+  build:
+    needs: set-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
