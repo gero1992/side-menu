@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Set default credentials
@@ -23,11 +25,8 @@ jobs:
       - name: Set package version
         run: npm version $RELEASE_VERSION
       - name: Publish package
-      - uses: actions/setup-node@v1
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - name: Push new version
+      - name: Push new version to repo
         run: |
           git remote add gh-origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git push gh-origin HEAD:master
