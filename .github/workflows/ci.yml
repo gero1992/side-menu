@@ -19,6 +19,7 @@ jobs:
           echo ${{ env.RELEASE_VERSION }}
           
   set-version:
+    needs: set-env
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
