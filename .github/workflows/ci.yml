@@ -32,7 +32,7 @@ jobs:
       - name: Set package version
         run: npm version $RELEASE_VERSION
       - name: Publish package
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: 12
         env:
