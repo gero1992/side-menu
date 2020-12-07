@@ -34,6 +34,11 @@ jobs:
       - name: Set package version
         run: npm version $RELEASE_VERSION
       - name: Publish package
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: npm publish --access public
       - name: Push new version to repo
         run: |
