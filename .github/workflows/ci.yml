@@ -1,4 +1,4 @@
-name: Publish version to NPM and demo to GH-Pages
+name: Publish package to NPM
 
 on:
   push:
