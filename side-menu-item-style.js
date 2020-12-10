@@ -120,14 +120,15 @@ export const sideMenuItemStyle = css`
     font-size: var(--sub-item-font-size)
   }
 
-  #overlay {
+ #overlay {
     display: block;
     left: 101%;
     min-width: 200px;
     padding: 4px 2px;
     background-color: var(--overlay-background-color);
+    background-image: var(--overlay-background-image, none);
     box-shadow: var(--overlay-box-shadow);
-    border: 1px solid #eee;
+    border: 1px solid var(--overlay-background-color);
     border-left: 0;
     border-radius: 0 3px 3px 0;
     position: absolute;
