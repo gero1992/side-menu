@@ -7,11 +7,13 @@ const sideMenuItemStyle = css`
     --icon-height: 2rem;
     --icon-width: 2rem;
     --item-selected-color: rgba(235, 89, 5, 0.1);
-    --item-selected-color-text: rgb(235, 89, 5);
     --item-color-active: rgba(26, 26, 26, 0.2);
     --item-color-hover: rgba(26, 26, 26, 0.1);
     --item-border-radius: 5px;
-    
+
+    --item-text-color: hsla(214, 40%, 16%, 0.94);
+    --item-icon-color: hsla(214, 45%, 20%, 0.5);
+    --item-selected-color-text: rgb(235, 89, 5);
     --font-family: "Segoe Ui";
     --item-font-size: 1rem;
     --sub-item-font-size: 0.85rem;
@@ -71,7 +73,7 @@ const sideMenuItemStyle = css`
   }
 
   :host(:not([selected])) #itemLink{
-    color: hsla(214, 40%, 16%, 0.94);
+    color: var(--item-text-color);
   }
 
   :host([expanded]){
@@ -93,7 +95,7 @@ const sideMenuItemStyle = css`
 
   slot[name="icon"]::slotted(*) {
     flex-shrink: 0;
-    color: hsla(214, 45%, 20%, 0.5);
+    color: var(--item-icon-color);
     height: var(--icon-height);
     width: var(--icon-width);
   }
@@ -118,14 +120,15 @@ const sideMenuItemStyle = css`
     font-size: var(--sub-item-font-size)
   }
 
-  #overlay {
+ #overlay {
     display: block;
     left: 101%;
     min-width: 200px;
     padding: 4px 2px;
     background-color: var(--overlay-background-color);
+    background-image: var(--overlay-background-image, none);
     box-shadow: var(--overlay-box-shadow);
-    border: 1px solid #eee;
+    border: 1px solid var(--overlay-background-color);
     border-left: 0;
     border-radius: 0 3px 3px 0;
     position: absolute;
