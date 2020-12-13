@@ -103,9 +103,15 @@ export class SideMenuItem extends LitElement {
             }
 
             if (propName === "selected"){
+                if (oldValue === this.selected){
+                    return;
+                }
+
                 if (this.selected) {
                     this._markParentWithSelectedChild();
                 }
+
+                this._changeSelectedState(true);
             }
         });
     }
@@ -163,6 +169,8 @@ export class SideMenuItem extends LitElement {
             this._changeSelectedState(true, e);
         } else {
             this.expanded = !this.expanded;
+            //Don't go anywhere
+            e.preventDefault();
         }
         //Don't propagate to parent
         e.stopPropagation();
