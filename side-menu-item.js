@@ -108,10 +108,9 @@ export class SideMenuItem extends LitElement {
                 }
 
                 if (this.selected) {
+                    this._changeSelectedState(true);
                     this._markParentWithSelectedChild();
                 }
-
-                this._changeSelectedState(this.selected);
             }
         });
     }
@@ -166,7 +165,7 @@ export class SideMenuItem extends LitElement {
 
     _onClick(e) {
         if (!this.hasChildren()) {
-            this._changeSelectedState(true, e);
+            this.selected = true;
         } else {
             this.expanded = !this.expanded;
             //Don't go anywhere
