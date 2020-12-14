@@ -19,6 +19,10 @@ class SideMenu extends LitElement {
      */
     _handleSelect(event) {
         let targetItem = event.target;
+
+        if (!targetItem.selected){
+            return;
+        }
         this._deselectAllItems();
 
         targetItem.selected = true;

@@ -111,7 +111,7 @@ export class SideMenuItem extends LitElement {
                     this._markParentWithSelectedChild();
                 }
 
-                this._changeSelectedState(true);
+                this._changeSelectedState(this.selected);
             }
         });
     }
