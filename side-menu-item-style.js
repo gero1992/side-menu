@@ -98,6 +98,7 @@ export const sideMenuItemStyle = css`
     color: var(--item-icon-color);
     height: var(--icon-height);
     width: var(--icon-width);
+    pointer-events: none;
   }
 
   #collapse-button {
