@@ -18531,7 +18531,12 @@ class SideMenuItem extends LitElement {
             }
 
             if (propName === "selected"){
+                if (oldValue === this.selected){
+                    return;
+                }
+
                 if (this.selected) {
+                    this._changeSelectedState(true);
                     this._markParentWithSelectedChild();
                 }
             }
@@ -18588,9 +18593,11 @@ class SideMenuItem extends LitElement {
 
     _onClick(e) {
         if (!this.hasChildren()) {
-            this._changeSelectedState(true, e);
+            this.selected = true;
         } else {
             this.expanded = !this.expanded;
+            //Don't go anywhere
+            e.preventDefault();
         }
         //Don't propagate to parent
         e.stopPropagation();
