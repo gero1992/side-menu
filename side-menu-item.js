@@ -18446,6 +18446,7 @@ class SideMenuItem extends LitElement {
       <a id="itemLink" 
         level=${this._getLevel} 
         href=${this.href || '#!'}
+        @click="${(e) => this._onClick(e)}"
         target=${ifDefined(this.target)}>
         <slot class="icon" name="icon"></slot>
         <div id ="content"
@@ -18503,7 +18504,6 @@ class SideMenuItem extends LitElement {
         super();
         this.selected = false;
         this.expanded = false;
-        this.addEventListener("click", e => this._onClick(e));
     }
 
     firstUpdated(changedProperties) {
@@ -18599,8 +18599,6 @@ class SideMenuItem extends LitElement {
             //Don't go anywhere
             e.preventDefault();
         }
-        //Don't propagate to parent
-        e.stopPropagation();
     }
 
     _outsideClickListener(event) {
