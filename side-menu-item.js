@@ -18460,7 +18460,7 @@ class SideMenuItem extends LitElement {
         return html$1`
       ${this._getLevel === 0 && this.compact
             ? html$1`
-            <paper-tooltip for="itemLink" position="right">
+            <paper-tooltip for="itemLink" position="right" animation-delay="0">
               ${this.label}
             </paper-tooltip>
           `
