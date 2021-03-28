@@ -32,7 +32,7 @@ export class SideMenuItem extends LitElement {
         return html`
       ${this._getLevel === 0 && this.compact
             ? html`
-            <paper-tooltip for="itemLink" position="right">
+            <paper-tooltip for="itemLink" position="right" animation-delay="0">
               ${this.label}
             </paper-tooltip>
           `
