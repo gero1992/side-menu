@@ -1,5 +1,7 @@
 [![npm version](https://badgen.net/npm/v/@maksu/side-menu)](https://www.npmjs.com/package/@maksu/side-menu)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@maksu/side-menu)
+[![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/gero1992side-menu)
+
 # side-menu
 
 Side-menu is a LitElement Web Component providing application navigation functionality withing the UI. 
