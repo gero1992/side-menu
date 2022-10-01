@@ -122,6 +122,6 @@ When you have a multi level menu, you can expand the child items by adding **`ex
 ```
 
 ## Running the demo locally
-1. Fork the 'side-menu' repository and clone it.
-1. Run 'npm-install' to install the dependencies.
-1. Run 'npm start' and the browser will automatically open the component demo.
+1. Fork the `side-menu` repository and clone it.
+1. Run `npm install` to install the dependencies.
+1. Run `npm start` and the browser will automatically open the component demo.
