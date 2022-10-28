@@ -1,6 +1,5 @@
 import { LitElement, html, css } from "lit-element";
 import { sideMenuItemStyle } from "./side-menu-item-style.js";
-import {ifDefined} from 'lit-html/directives/if-defined';
 import "@polymer/iron-icon/iron-icon.js";
 import "@polymer/iron-icons/iron-icons.js";
 import "@polymer/paper-tooltip";
@@ -19,7 +18,7 @@ export class SideMenuItem extends LitElement {
         level=${this._getLevel} 
         href=${this.href || '#!'}
         @click="${(e) => this._onClick(e)}"
-        target=${ifDefined(this.target)}>
+        ?target=${this.target}>
         <slot class="icon" name="icon"></slot>
         <div id ="content"
            <span>${this.label}</span>
