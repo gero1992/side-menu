@@ -1,4 +1,5 @@
 import {LitElement, html, css} from "lit-element";
+import "./side-menu-item.js";
 
 class SideMenu extends LitElement {
 
