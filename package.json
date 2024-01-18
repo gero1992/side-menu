@@ -19,7 +19,7 @@
   "scripts": {
     "start": "polyserve --npm --port 3000 --open"
   },
-  "main": "side-menu.js",
+  "main": "index.js",
   "dependencies": {
     "@polymer/iron-icon": "3.0.1",
     "@polymer/iron-icons": "3.0.1",
